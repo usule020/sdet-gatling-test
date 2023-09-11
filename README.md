@@ -24,7 +24,7 @@ Replace [DOCKER_CONTAINER_NAME] with a suitable name for your Docker image
 docker run -it --rm [DOCKER_CONTAINER_NAME] -s apicenter.ApiSimulation
 ```
 
-3. After running the test, Gatling will generate HTML reports in the container. To view the results, you can copy the report files out of to your host machine. To copy the report to your local machine, you can use the following command:
+3. After running the test, Gatling will generate HTML reports in the container. To view the results, you can copy the report files to your host machine. To copy the report to your local machine, you can use the following command:
 ```bash
 docker cp container_id:/opt/gatling/results /path/to/local/results
 ```
