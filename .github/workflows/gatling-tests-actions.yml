@@ -3,7 +3,7 @@ name: Run Gatling tests on docker
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-run:
