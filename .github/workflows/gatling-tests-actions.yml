@@ -23,4 +23,4 @@ jobs:
         run: docker build -t gatling-docker-test .
 
       - name: Run Docker container
-        run: docker run -it --rm gatling-docker-test -s apicenter.ApiSimulation
+        run: docker run -i --rm gatling-docker-test -s apicenter.ApiSimulation
