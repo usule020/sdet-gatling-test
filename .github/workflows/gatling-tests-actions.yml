@@ -1,0 +1,26 @@
+name: Run Gatling tests on docker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        run: |
+          docker --version
+          docker-compose --version
+        # Set up any additional Docker configurations here
+
+      - name: Build Docker image
+        run: docker build -t gatling-docker-test .
+
+      - name: Run Docker container
+        run: docker run -it --rm gatling-docker-test -s apicenter.ApiSimulation
